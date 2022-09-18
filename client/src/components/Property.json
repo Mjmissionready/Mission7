@@ -1,0 +1,79 @@
+[{
+  "_id": {
+    "$oid": "6326d65f97edb13f9fb41653"
+  },
+  "Suburb": "Mount Eden",
+  "Address": "25 Enfield Street",
+  "Bathroom": "2",
+  "Carpark": "1 ",
+  "Price": "$400",
+  "term": "week",
+  "NZ": "Auckland",
+  "Bedroom": "2",
+  "District": "Auckland City"
+},{
+  "_id": {
+    "$oid": "632717a6dddc8147895e4fce"
+  },
+  "NZ": "Auckland",
+  "District": "Auckland City",
+  "Suburb": "City Centre",
+  "Address": "70 Sale Street",
+  "Bedroom": "1",
+  "Bathroom": "1",
+  "Carpark": "0",
+  "Price": "$500",
+  "term": "week"
+},{
+  "_id": {
+    "$oid": "6327198ddddc8147895e4fcf"
+  },
+  "NZ": "Auckland",
+  "District": "Waitakere City",
+  "Suburb": "West City Centre",
+  "Address": "70 Sale Street",
+  "Bedroom": "1",
+  "Bathroom": "1",
+  "Carpark": "0",
+  "Price": "$540",
+  "term": "week"
+},{
+  "_id": {
+    "$oid": "63271aa1dddc8147895e4fd1"
+  },
+  "NZ": "Auckland",
+  "District": "Auckland City",
+  "Suburb": "City Centre",
+  "Address": "34 Kingston Street",
+  "Bedroom": "1",
+  "Bathroom": "1",
+  "Carpark": "0",
+  "Price": "$450",
+  "term": "week"
+},{
+  "_id": {
+    "$oid": "63271af6dddc8147895e4fd2"
+  },
+  "NZ": "Auckland",
+  "District": "Waitakere City",
+  "Suburb": "West City",
+  "Address": "147-149 Victoria Street",
+  "Bedroom": "2",
+  "Bathroom": "1",
+  "Carpark": "0",
+  "Price": "$490",
+  "term": "week"
+},{
+  "_id": {
+    "$oid": "63271b65dddc8147895e4fd4"
+  },
+  "NZ": "Auckland",
+  "District": "Auckland City",
+  "Suburb": "City Centre City",
+  "Address": "34 Kingston Street",
+  "Bedroom": "2",
+  "Bathroom": "1",
+  "Carpark": "0",
+  "Price": "$485",
+  "term": "week"
+}]
