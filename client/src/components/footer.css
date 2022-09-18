@@ -1,0 +1,86 @@
+.footer {
+  margin-top: 50px;
+  width: 100%;
+  font-size: 12px;
+  background-color: var(--nav);
+}
+
+.fLists {
+  padding: 20px 100px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.fList {
+  list-style: none;
+  padding: 0;
+}
+
+.fList li {
+  line-height: 1.7;
+}
+
+.fListItem {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.fSubscribe {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.fSubscribe input {
+  width: 260px;
+  height: 30px;
+  padding: 10px;
+  border: none;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.fSubscribe button {
+  height: 40px;
+  width: 130px;
+  background-color: var(--red);
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.fIcons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.fLogo {
+  width: auto;
+  height: 45px;
+  margin-bottom: 32px;
+}
+
+.fIcon {
+  display: flex;
+  width: 230px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a:link {
+  text-decoration: none;
+}
+.fText {
+  padding: 10px 100px;
+}

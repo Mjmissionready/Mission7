@@ -1,0 +1,28 @@
+* {
+  box-sizing: block;
+  margin: 0;
+}
+
+:root {
+  --nav: #181818;
+  --red: #c7453c;
+  --gray: rgb(94, 94, 94);
+  --lightGray: #C1C1C1;
+  /* --lightGrey: #D8D8D8; */
+}
+
+.homeContainer {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+.homeTitle {
+  width: 100%;
+  max-width: 1024px;
+  font-size: 20px;
+  margin: 50px 0 20px;
+}
