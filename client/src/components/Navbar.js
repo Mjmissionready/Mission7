@@ -14,15 +14,6 @@ export default function Navbar() {
     //     setDropdown(false);
     // }
 
-    //     const [openBathrooms, setOpenBathrooms] = useState(false);
-    //     const [options, setOptions] = useState([
-    //     { id: 1, lang: "Te reo Māori" },
-    //     { id: 2, lang: "中文" },
-    //     { id: 4, lang: "Farsi" },
-    //     { id: 5, lang: "日本語" },
-    //     { id: 5, lang: "한국어" },
-    // ]);
-
     return (
         <div className="navbar">
             <div className="navContainer">

@@ -6,7 +6,7 @@ import {
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import List from "./pages/List";
+import Property from "./pages/Property";
 import Apt from "./pages/Apt";
 
 function App() {
@@ -15,8 +15,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/list" element={<List />} />
-        <Route path="/list/:id" element={<Apt />} />
+        <Route path="/property" element={<Property />} />
+        <Route path="/apt" element={<Apt />} />
       </Routes>
       <Footer />
     </BrowserRouter>
