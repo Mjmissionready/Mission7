@@ -1,9 +1,13 @@
 import React from "react";
-import "./apt.css"
+import SearchProperty from "../components/SearchProperty";
+
 
 export default function Apt() {
 
     return (
-        <div>Apt</div>
+        
+        <>
+        <SearchProperty/>
+        </>
     );
 }
