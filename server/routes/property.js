@@ -1,4 +1,5 @@
 const express = require("express");
+// const { default: Property } = require("../../client/src/pages/Property.js");
 const {
     getAllProperties,
     getProperty,

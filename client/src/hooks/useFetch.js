@@ -5,22 +5,7 @@ const useFetch = (url) => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
-
-    // let url = "";
-
-    // url = "/" + urlEntry;
   
-
-    // if (process.env.MONGO === "production") {
-    //   url = "/" + urlEntry;
-    //   console.log(url)
-    // } else {
-    //   url = urlEntry;
-    //   console.log(url)
-    // }
-
-    
-
     useEffect(() => {
         const fetchData = async () => {
             setLoading(true)

@@ -36,7 +36,7 @@ export default function Navbar() {
                     <Link to="/property" className="navItem">Switch</Link>
                     <Link to="/" className="navItem">Owners</Link>
                     <Link to="/" className="navItem">Tenants</Link>
-                    <Link to="/" className="navItem">Login</Link>
+                    <Link to="/property/list" className="navItem">Login</Link>
 
                     <div className=
                         {dropdown ? "navDropdown clicked" : "navDropdown"}

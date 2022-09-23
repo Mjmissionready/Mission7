@@ -1,5 +1,6 @@
 const Property = require("../models/Property.js");
 
+
 exports.getAllProperties = async (req, res, next) => {
     try {
         const getAll = await Property.find(req.query);
@@ -8,6 +9,67 @@ exports.getAllProperties = async (req, res, next) => {
         next(err);
     }
 }
+
+
+exports.countByDistrict = async (req, res, next) => {
+    const districts = req.query.districts.split(",")
+    try {
+        const districList = await Promise.all(districts.map(District => {
+            return Property.countDocuments({ District: District })
+        }));
+        res.status(200).json(districList);
+    } catch (err) {
+        next(err);
+    }
+}
+// localhost:8080/listing/countByDistrict?districts=Auckland City,Waitakere City
+
+
+exports.getProperty = async (req, res, next) => {
+    try {
+        const getOne = await Property.findById(
+            req.params.id)
+        res.status(200).json(getOne);
+    } catch (err) {
+        next(err);
+    }
+}
+
+
+
+exports.CountBySuburb = async (req, res, next) => {
+    try {
+        const Centre = await Property.countDocuments({ Suburb: "City Centre" });
+        const aCBD = await Property.countDocuments({ Suburb: "Auckland CBD" });
+        const Eden = await Property.countDocuments({ Suburb: "Mount Eden" });
+        const West = await Property.countDocuments({ Suburb: "West City" });
+
+        res.status(200).json([
+            { Suburb: "City Centre", count: Centre },
+            { Suburb: "Mount Eden", count: aCBD },
+            { Suburb: "Southland", count: Eden },
+            { Suburb: "West City", count: West },
+        ]);
+    } catch (err) {
+        next(err);
+    }
+}
+// localhost:8080/listing/countBySuburb
+
+
+exports.countByBedroom = async (req, res, next) => {
+    const bedrooms = req.query.bedroom.split(",")
+    try {
+        const bedroomList = await Promise.all(bedrooms.map(Bedroom => {
+            return Property.countDocuments({ Bedroom: Bedroom })
+        }));
+        res.status(200).json(bedroomList);
+    } catch (err) {
+        next(err);
+    }
+}
+// countByBedroom?bedrooms=1,2,3
+
 
 
 exports.countByNZ = async (req, res, next) => {
@@ -51,55 +113,6 @@ exports.countByNZ = async (req, res, next) => {
 }
 
 
-exports.countByDistrict = async (req, res, next) => {
-    const districts = req.query.districts.split(",")
-    try {
-        const districList = await Promise.all(districts.map(District => {
-            return Property.countDocuments({ District: District })
-        }));
-        res.status(200).json(districList);
-    } catch (err) {
-        next(err);
-    }
-}
-// localhost:8080/listing/countByDistrict?districts=Auckland City,Waitakere City
-
-
-exports.CountBySuburb = async (req, res, next) => {
-    try {
-        const Centre = await Property.countDocuments({ Suburb: "City Centre" });
-        const aCBD = await Property.countDocuments({ Suburb: "Auckland CBD" });
-        const Eden = await Property.countDocuments({ Suburb: "Mount Eden" });
-        const West = await Property.countDocuments({ Suburb: "West City" });
-
-        res.status(200).json([
-            { Suburb: "City Centre", count: Centre },
-            { Suburb: "Mount Eden", count: aCBD },
-            { Suburb: "Southland", count: Eden },
-            { Suburb: "West City", count: West },
-        ]);
-    } catch (err) {
-        next(err);
-    }
-}
-// localhost:8080/listing/countBySuburb
-
-
-exports.countByBedroom = async (req, res, next) => {
-    const bedrooms = req.query.bedroom.split(",")
-    try {
-        const bedroomList = await Promise.all(bedrooms.map(Bedroom => {
-            return Property.countDocuments({ Bedroom: Bedroom })
-        }));
-        res.status(200).json(bedroomList);
-    } catch (err) {
-        next(err);
-    }
-}
-// countByBedroom?bedrooms=1,2,3
-
-
-
 exports.countByBathroom = async (req, res, next) => {
     const bathrooms = req.query.bathrooms.split(",")
     try {
@@ -127,16 +140,6 @@ exports.countByBathroom = async (req, res, next) => {
 // }
 // countByCarpark?carparks=1
 
-
-exports.getProperty = async (req, res, next) => {
-    try {
-        const getOne = await Property.findById(
-            req.params.id)
-        res.status(200).json(getOne);
-    } catch (err) {
-        next(err);
-    }
-}
 
 
 exports.createProperty = async (req, res, next) => {

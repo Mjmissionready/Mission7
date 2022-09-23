@@ -76,9 +76,7 @@ export default function SearchItem({ item }) {
                                             {item.Term}
                                         </div>
                                     </div>
-                                    <Link to={`/property/listing/${item._id}`}>
-                                        <button className="siCheckBtn"> View Details </button>
-                                    </Link>
+                                    
                                 </div>
                             </div>
                         </>
