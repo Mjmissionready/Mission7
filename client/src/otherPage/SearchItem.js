@@ -16,7 +16,7 @@ import useFetch from "../hooks/useFetch";
 
 export default function SearchItem({ item }) {
     const { data, loading, error, reFetch } = useFetch(
-        `property/listing?NZ=Auckland`
+        `/listing?District=${data.District}&Suburbs=${data.suburb}&Bedroom=${data.bedroom}&Bathroom=${data.bathroom}`
     );
     
 

@@ -9,12 +9,14 @@ import useFetch from "../hooks/useFetch";
 
 export default function List() {
 
-    // const location = useLocation();
-    // const [destination, setDestination] = useState(location.state.destination);
-    // const [options, setOptions] = useState(location.state.options);
-    
+    const location = useLocation();
+    const [districts, setDistricts] = useState(location.state.districts);
+    const [suburbs, setSuburbs] = useState(location.state.suburbs);
+    // const [bedrooms, setBedrooms] = useState(undefined);
+    // const [bathrooms, setBathrooms] = useState(undefined);
+
     const { data, loading, error, reFetch } = useFetch(
-        `/listing?NZ=Auckland`
+        `/listing?District=${data.District}&Suburbs=${data.suburb}`
     );
 
     // const handleClick = () => {
@@ -32,8 +34,12 @@ export default function List() {
                         <div className="lsTitle">Search</div>
                         <div className="lsItem">
                             <label>Location</label>
-                            <input placeholder="District" type="text" />
-                            <input placeholder="Suburb" type="text" />
+                            <input
+                                placeholder={districts} type="text" />
+                            onChange={(e) => setDistricts(e.target.value)}
+                            <input
+                                placeholder={suburbs} type="text" />
+                            onChange={(e) => setSuburbs(e.target.value)}
                         </div>
 
                         <div className="lsItem">

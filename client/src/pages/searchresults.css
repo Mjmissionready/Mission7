@@ -54,6 +54,22 @@
   .hamburger:hover {
     background-color: #0076be;
   }
+
+  .searchBtn {
+    padding: 10px;
+    background-color: var(--blue);
+    color: white;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 200px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: var(--red);
+    margin-left: 10px;
+  }
+
   @media screen and (max-width: 550px) {
     .hamburger {
       display: block;
