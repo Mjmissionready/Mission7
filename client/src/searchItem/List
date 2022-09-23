@@ -1,0 +1,111 @@
+<!-- import React, { useState } from "react";
+import Navbar from "./Nav";
+import SearchItem from "./List";
+import { useLocation, useNavigate } from "react-router-dom";
+import "./list.css";
+import Footer from "./Foot";
+import useFetch from "../hooks/useFetch";
+
+
+export default function List() {
+
+    // const location = useLocation();
+    // const [destination, setDestination] = useState(location.state.destination);
+    // const [options, setOptions] = useState(location.state.options);
+    // const [min, setMin] = useState(undefined);
+    // const [max, setMax] = useState(undefined);
+
+    // const { data, loading, error, reFetch } = useFetch(
+    //     `/countByDistrict?districts=${destination}&min=${min || 0}&max=${max || 999}`
+    // );
+
+    // const handleClick = () => {
+    //     reFetch();
+    // };
+
+    // const navigate = useNavigate();
+
+    // const handleSearch = () => {
+    //     dispatch({ type: "NEW_SEARCH", payload: { destination, options } });
+    //     navigate("/properties", { state: { destination, options } });
+    //   };
+
+
+    return (
+        <div>
+            <Navbar />
+            <div className="listContainer">
+                <div className="listWrapper">
+                    <div className="listSearch">
+                        <div className="lsTitle">Search</div>
+                        <div className="lsItem">
+                            <label>Location</label>
+                            <input placeholder="" type="text" />
+                            {/* <input placeholder={destination} type="text" /> */}
+                            <input placeholder="" type="text" />
+                        </div>
+
+                        <div className="lsItem">
+                            <label>Options</label>
+                            <div className="lsOption">
+                                <span className="lsOptionText">
+                                    Min price
+                                </span>
+                                <input type="number"
+                                    // onChange={(e) => setMin(e.target.value)}
+                                    className="lsOptionInput" />
+                            </div>
+
+                            <div className="lsOption">
+                                <span className="lsOptionText">
+                                    Max price
+                                </span>
+                                <input type="number"
+                                    // onChange={(e) => setMax(e.target.value)}
+                                    className="lsOptionInput" />
+                            </div>
+
+                            <div className="lsOption">
+                                <span className="lsOptionText">Room</span>
+                                <input
+                                    type="number"
+                                    min={1}
+                                    max={4}
+                                    className="lsOptionInput"
+                                    // placeholder={options.Bedroom}
+                                />
+                            </div>
+
+                            <div className="lsOption">
+                                <span className="lsOptionText">Bathroom</span>
+                                <input
+                                    type="number"
+                                    min={1}
+                                    max={4}
+                                    className="lsOptionInput"
+                                    // placeholder={options.Bathroom}
+                                />
+                            </div>
+                        </div>
+                        {/* <button onClick={handleClick}>Search</button> */}
+                        <button>Search</button>
+                    </div>
+
+                    <div className="listResult">
+                                <SearchItem />
+
+
+                        {/* {loading ? "loading" : <>
+                            {data.map(item => (
+                                <SearchItem item={item} key={item._id} />
+                            ))}
+                        </>} */}
+                    </div>
+
+                </div>
+            </div>
+            <Footer />
+        </div>
+
+    );
+}; -->

@@ -1,9 +1,10 @@
-import express from "express";
+const express = require("express");
 
-const router = express.Router();
+const authRoute = express.Router();
 
-router.get("/", (req, res) => {
-    res.send("Hello this is auth endpoint")
+authRoute.get("/", (req, res) => {
+    res.send("Hello, this is auth endpoint")
 })
 
-export default router
+// export default router;
+module.exports = { authRoute };

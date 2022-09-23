@@ -1,0 +1,73 @@
+// const express = require("express");
+// const Property = require("../models/Property.js");
+
+// const propertyRoute = express.Router();
+
+// propertyRoute.get("/", async (req, res, next) => {
+//     // const failed = true;
+//     // const err = new Error();
+//     // err.status = 404;
+//     // err.message = "Sorry no data found!";
+//     // if (failed) return next(err);
+
+//     try {
+//         const getAll = await Property.find();
+//         res.status(200).json(getAll);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
+
+
+// propertyRoute.get("/:id", async (req, res) => {
+//     try {
+//         const getOne = await Property.findById(
+//             req.params.id)
+//         res.status(200).json(getOne);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
+
+
+// propertyRoute.post("/", async (req, res) => {
+//     // res.send("it SHOUDL WORK!!!!!")
+//     const newProperty = new Property(req.body)
+//     try {
+//         const savedProperty = await newProperty.save()
+//         res.status(200).json(savedProperty)
+//     } catch (err) {
+//         res.status(500).json(err)
+//     }
+// });
+
+
+// propertyRoute.put("/:id", async (req, res) => {
+//     try {
+//         const updateProperty =
+//             await Property.findByIdAndUpdate(
+//                 req.params.id,
+//                 { $set: req.body },
+//                 { new: true }
+//             );
+//         res.status(200).json(updateProperty);
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
+
+
+// propertyRoute.delete("/:id", async (req, res) => {
+//     try {
+//         await Property.findByIdAndDelete(
+//             req.params.id
+//         );
+//         res.status(200).json("Listing has been deleted!");
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
+
+
+// module.exports = { propertyRoute };
+// // export default router

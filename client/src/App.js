@@ -3,22 +3,24 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+// import Navbar from "./components/Navbar";
+// import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Property from "./pages/Property";
-import Apt from "./pages/Apt";
+import List from "./otherPage/List";
+import SearchResultsMain from "./pages/SearchResultsMain";
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/property" element={<Property />} />
-        <Route path="/apt" element={<Apt />} />
+        <Route path="/property" element={<SearchResultsMain />} />
+        <Route path="/property/listing" element={<List />} />
+        <Route path="/property/listing/:id" element={<Property />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

@@ -3,6 +3,7 @@ import "./navbar.css";
 import Metro from "../images/Metro.png"
 import { GrLanguage } from 'react-icons/gr';
 import { TbTriangleInverted } from 'react-icons/tb';
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
     const [dropdown, setDropdown] = useState(false);
@@ -14,18 +15,30 @@ export default function Navbar() {
     //     setDropdown(false);
     // }
 
+    // const [destination, setDestination] = useState("");
+
+    // const navigate = useNavigate();
+
+    // const handleSearch = () => {
+    //     navigate("/property/listing", { state: { destination } });
+    // };
+
+
+
     return (
         <div className="navbar">
             <div className="navContainer">
-                <img src={Metro} className="logo" alt="">
-                </img>
-                <ul className="navItems">
-                    <li className="navItem">Switch</li>
-                    <li className="navItem">Owners</li>
-                    <li className="navItem">Tenants</li>
-                    <li className="navItem">Login</li>
+                <Link to="/">
+                    <img src={Metro} className="logo" alt="" />
+                </Link>
 
-                    <ul className=
+                <ul className="navItems">
+                    <Link to="/property" className="navItem">Switch</Link>
+                    <Link to="/" className="navItem">Owners</Link>
+                    <Link to="/" className="navItem">Tenants</Link>
+                    <Link to="/" className="navItem">Login</Link>
+
+                    <div className=
                         {dropdown ? "navDropdown clicked" : "navDropdown"}
                         onClick={() => setDropdown(!dropdown)}>
                         <GrLanguage />
@@ -42,7 +55,7 @@ export default function Navbar() {
                                 <li>한국어</li>
                             </div>
                         ) : null}
-                    </ul>
+                    </div>
 
                     {/* <button className="navBtn">Register</button>
                     <button className="navBtn">Login</button> */}

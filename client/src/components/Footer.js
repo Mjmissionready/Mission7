@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import {
 //     faFacebook,
@@ -53,7 +54,9 @@ export default function Footer() {
           </ul>
 
           <ul className="fIcons">
-            <img src={Metro} className="fLogo" alt="" />
+            <Link to="/">
+              <img src={Metro} className="fLogo" alt="" />
+            </Link>
             <li className="fIcon">
               <a href="https://www.facebook.com/MetroNZ/">
                 <FaFacebookF size={"30px"} style={{ color: "white" }} /> </a>

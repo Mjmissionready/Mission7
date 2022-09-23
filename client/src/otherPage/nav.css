@@ -1,0 +1,62 @@
+.nbar {
+  height: 50px;
+  background-color: var(--nav);
+  display: flex;
+  justify-content: center;
+  padding: 20px 100px;
+}
+
+.nContainer {
+  width: 100%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nlogo {
+  width: "auto";
+  height: 60px;
+  cursor: pointer;
+}
+
+.nItems {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nItem {
+  font-weight: 400;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* .navItem {
+
+} */
+
+.nLan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  gap: 5px;
+}
+
+/* .navBtn {
+  margin-left: 30px;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 16px;
+  cursor: pointer;
+  color: var(--nav);
+  font-weight: 700;
+}
+
+.navBtn:hover {
+  background-color: var(--headerText);
+  color: white;
+  font-weight: 700;
+} */

@@ -20,6 +20,7 @@
 .logo {
   width: "auto";
   height: 60px;
+  cursor: pointer;
 }
 
 .navItems {
@@ -27,10 +28,11 @@
   width: 40%;
   display: flex;
   justify-content: space-between;
-  list-style-type: none;
 }
 
-.navItems li {
+.navItem {
+  text-decoration: none;
+  color: white;
   cursor: pointer;
 }
 
@@ -51,7 +53,7 @@
   position: absolute;
   right: 0;
   width: 135px;
-  bottom: -286px;
+  bottom: -275px;
 }
 
 .navLan li {

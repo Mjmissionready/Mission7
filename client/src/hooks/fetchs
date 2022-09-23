@@ -1,0 +1,62 @@
+// in dropdown
+
+// const { data, loading, error } =useFetch("property/listing/countByDistrict?districts=Auckland City,Waitakere City");
+
+// return (
+
+//     {loading ? (
+//         "Loading please wait"
+//     ) : ( <>
+
+
+
+
+//    </> )}
+// )
+
+
+// 1st data Auckland City= {data [0]}
+// 2st data Waitakere City= {data [1]}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const { data, loading, error } = useFetch(localhost: 8080 / property / listing / countByNZ)
+// const images = [
+//     "http://"
+// ]
+
+// return (
+//     {
+//         loading?(
+//             "Loading please wait"
+//         ): (<>
+
+//            {data && images.map(img, i => (
+
+
+//             <div className="idontknow" key={i}>
+//                 <img src={img} />
+
+//                 <h1> {data[i]?.NZ} </h1>
+//                 <h2> {data[i]. count} {data[i]?.NZ} </h2>
+
+//                </div>
+
+//         ))}
+//             </>
+// )
+//     }
+// )
